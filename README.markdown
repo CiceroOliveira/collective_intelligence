@@ -10,9 +10,9 @@ Recommendations
 
 Algorithms used to make recommendations based on similar choices (think Amazon products' recommedations or delicious recommended links).
 
-### Basic usage:
+###Basic usage:
 
-#### Euclidian distance
+####Euclidian distance
 
 Contributing to collective_intelligence
 ---------------------------------------
