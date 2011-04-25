@@ -1,6 +1,7 @@
 #$:.unshift File.expand_path('..', __FILE__)
 #$:.unshift File.expand_path('../../lib', __FILE__)
 
+require 'cover_me'
 require 'rspec'
 require 'collective_intelligence'
 
