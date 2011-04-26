@@ -38,5 +38,10 @@ module CollectiveIntelligence
       top_matches.length.should == n_matches
       top_matches[0].include?('Lisa Rose').should be(true)
     end
+    
+    it 'should return recommendations' do
+      recommendations = Recommendations::get_recommendations(critics,'Toby')
+      recommendations.should == [[3.3477895267131017, "The Night Listener"], [2.8325499182641614, "Lady in the Water"], [2.530980703765565, "Just My Luck"]]
+    end
   end
 end

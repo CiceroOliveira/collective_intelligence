@@ -2,8 +2,8 @@
   <head>
     <title>lib/collective_intelligence/recommendations.rb</title>
     
-    <link href="../../report.css?0.29908208140437" media="screen" rel="stylesheet" type="text/css" />
-    <script src='../../jquery.js?0.88912383665404'></script>
+    <link href="../../report.css?0.12279820917776774" media="screen" rel="stylesheet" type="text/css" />
+    <script src='../../jquery.js?0.5624414653775398'></script>
     <script>
       $(function() {
 
@@ -54,8 +54,8 @@
           lib/collective_intelligence/recommendations.rb
           
         </td>
-        <td>77</td>
-        <td>41</td>
+        <td>131</td>
+        <td>83</td>
         <td>100.0%</td>
       </tr>
     </table>
@@ -88,7 +88,7 @@
               <td class='code_line'>
                 <pre>module CollectiveIntelligence</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -96,7 +96,7 @@
               <td class='code_line'>
                 <pre>  module Recommendations</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -104,7 +104,7 @@
               <td class='code_line'>
                 <pre>  	include Math</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="never" "">
@@ -128,7 +128,7 @@
               <td class='code_line'>
                 <pre>  	def self.similarity_distance(preferences, person1, person2)</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -136,7 +136,7 @@
               <td class='code_line'>
                 <pre>  		shared_items = {}</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="never" "">
@@ -152,7 +152,7 @@
               <td class='code_line'>
                 <pre>  		preferences[person1].each do |key, value|</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -160,7 +160,7 @@
               <td class='code_line'>
                 <pre>  			if preferences[person2]</pre>
               </td>
-              <td class='hit_number'>6</td>
+              <td class='hit_number'>312</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -168,7 +168,7 @@
               <td class='code_line'>
                 <pre>  				shared_items[key] = 1 if preferences[person2].has_key? key</pre>
               </td>
-              <td class='hit_number'>6</td>
+              <td class='hit_number'>312</td>
             </tr>
           
             <tr class="never" "">
@@ -200,7 +200,7 @@
               <td class='code_line'>
                 <pre>  		return 0 if shared_items.length == 0</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="never" "">
@@ -216,7 +216,7 @@
               <td class='code_line'>
                 <pre>  		squares_sum = 0</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="never" "">
@@ -232,7 +232,7 @@
               <td class='code_line'>
                 <pre>  		preferences[person1].each do |key, value|</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -240,7 +240,7 @@
               <td class='code_line'>
                 <pre>  			squares_sum += (preferences[person1][key] - preferences[person2][key]) ** 2</pre>
               </td>
-              <td class='hit_number'>6</td>
+              <td class='hit_number'>312</td>
             </tr>
           
             <tr class="never" "">
@@ -256,7 +256,7 @@
               <td class='code_line'>
                 <pre>  		return 1/(1+squares_sum)</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="never" "">
@@ -288,7 +288,7 @@
               <td class='code_line'>
                 <pre>  	def self.similarity_pearson(preferences, person1, person2)</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -296,7 +296,7 @@
               <td class='code_line'>
                 <pre>  		shared_items = {}</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="never" "">
@@ -312,7 +312,7 @@
               <td class='code_line'>
                 <pre>  		preferences[person1].each do |key, value|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -320,7 +320,7 @@
               <td class='code_line'>
                 <pre>  			shared_items[key] = 1 if preferences[person2].has_key? key</pre>
               </td>
-              <td class='hit_number'>24</td>
+              <td class='hit_number'>1914</td>
             </tr>
           
             <tr class="never" "">
@@ -344,7 +344,7 @@
               <td class='code_line'>
                 <pre>  		n = shared_items.length</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="never" "">
@@ -360,7 +360,7 @@
               <td class='code_line'>
                 <pre>  		return 0 if n==0</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="never" "">
@@ -376,7 +376,7 @@
               <td class='code_line'>
                 <pre>  		sum1, sum2 = 0, 0</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="never" "">
@@ -392,7 +392,7 @@
               <td class='code_line'>
                 <pre>  		shared_items.each do |key, value|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -400,7 +400,7 @@
               <td class='code_line'>
                 <pre>  			sum1 += preferences[person1][key]</pre>
               </td>
-              <td class='hit_number'>23</td>
+              <td class='hit_number'>1828</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -408,7 +408,7 @@
               <td class='code_line'>
                 <pre>  			sum2 += preferences[person2][key]</pre>
               </td>
-              <td class='hit_number'>23</td>
+              <td class='hit_number'>1828</td>
             </tr>
           
             <tr class="never" "">
@@ -432,7 +432,7 @@
               <td class='code_line'>
                 <pre>  		sum1_sq, sum2_sq = 0, 0</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="never" "">
@@ -448,7 +448,7 @@
               <td class='code_line'>
                 <pre>  		shared_items.each do |key, value|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -456,7 +456,7 @@
               <td class='code_line'>
                 <pre>  			sum1_sq += (preferences[person1][key] ** 2)</pre>
               </td>
-              <td class='hit_number'>23</td>
+              <td class='hit_number'>1828</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -464,7 +464,7 @@
               <td class='code_line'>
                 <pre>  			sum2_sq += (preferences[person2][key] ** 2)</pre>
               </td>
-              <td class='hit_number'>23</td>
+              <td class='hit_number'>1828</td>
             </tr>
           
             <tr class="never" "">
@@ -488,7 +488,7 @@
               <td class='code_line'>
                 <pre>  		sum_products = 0</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="never" "">
@@ -504,7 +504,7 @@
               <td class='code_line'>
                 <pre>  		shared_items.each do |key, value|</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -512,7 +512,7 @@
               <td class='code_line'>
                 <pre>  			sum_products += (preferences[person1][key] * preferences[person2][key])</pre>
               </td>
-              <td class='hit_number'>23</td>
+              <td class='hit_number'>1828</td>
             </tr>
           
             <tr class="never" "">
@@ -544,7 +544,7 @@
               <td class='code_line'>
                 <pre>  		num = sum_products - (sum1 * sum2/n)</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
@@ -552,7 +552,7 @@
               <td class='code_line'>
                 <pre>  		den = Math::sqrt((sum1_sq - sum1 ** 2/n) * (sum2_sq - sum2 ** 2 / n))</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="never" "">
@@ -568,7 +568,7 @@
               <td class='code_line'>
                 <pre>  		den == 0 ? 0 : num/den</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>586</td>
             </tr>
           
             <tr class="never" "">
@@ -587,48 +587,64 @@
               <td class='hit_number'></td>
             </tr>
           
-            <tr class="hit" data-hits='#{cov}'"">
+            <tr class="never" "">
               <td class='line_number'>64</td>
               <td class='code_line'>
-                <pre>  	def self.top_matches(preferences, person, n=5, similarity=:similarity_pearson)</pre>
+                <pre>	  # Return the best matches for person from the prefs dictionary.</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'></td>
             </tr>
           
-            <tr class="hit" data-hits='#{cov}'"">
+            <tr class="never" "">
               <td class='line_number'>65</td>
               <td class='code_line'>
-                <pre>  		scores = []</pre>
+                <pre>	  # Number of results and similarity function are optional</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'></td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
               <td class='line_number'>66</td>
               <td class='code_line'>
-                <pre>  		preferences.each do |other|</pre>
+                <pre>  	def self.top_matches(preferences, person, n=5, similarity=:similarity_pearson)</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
               <td class='line_number'>67</td>
               <td class='code_line'>
-                <pre>  			if other[0] != person</pre>
+                <pre>  		scores = []</pre>
               </td>
-              <td class='hit_number'>7</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
               <td class='line_number'>68</td>
               <td class='code_line'>
+                <pre>  		preferences.each do |other|</pre>
+              </td>
+              <td class='hit_number'>52</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>69</td>
+              <td class='code_line'>
+                <pre>  			if other[0] != person</pre>
+              </td>
+              <td class='hit_number'>364</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>70</td>
+              <td class='code_line'>
                 <pre>  				scores << [(send similarity, preferences, person, other[0]), other[0]]</pre>
               </td>
-              <td class='hit_number'>6</td>
+              <td class='hit_number'>312</td>
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>69</td>
+              <td class='line_number'>71</td>
               <td class='code_line'>
                 <pre>  			end</pre>
               </td>
@@ -636,7 +652,7 @@
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>70</td>
+              <td class='line_number'>72</td>
               <td class='code_line'>
                 <pre>  		end</pre>
               </td>
@@ -644,7 +660,7 @@
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>71</td>
+              <td class='line_number'>73</td>
               <td class='code_line'>
                 <pre></pre>
               </td>
@@ -652,31 +668,31 @@
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>72</td>
+              <td class='line_number'>74</td>
               <td class='code_line'>
                 <pre>  		scores.sort!</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>73</td>
+              <td class='line_number'>75</td>
               <td class='code_line'>
                 <pre>  		scores.reverse!</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="hit" data-hits='#{cov}'"">
-              <td class='line_number'>74</td>
+              <td class='line_number'>76</td>
               <td class='code_line'>
                 <pre>  		return scores[0...n]</pre>
               </td>
-              <td class='hit_number'>1</td>
+              <td class='hit_number'>52</td>
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>75</td>
+              <td class='line_number'>77</td>
               <td class='code_line'>
                 <pre>  	end</pre>
               </td>
@@ -684,19 +700,379 @@
             </tr>
           
             <tr class="never" "">
-              <td class='line_number'>76</td>
+              <td class='line_number'>78</td>
+              <td class='code_line'>
+                <pre>  	</pre>
+              </td>
+              <td class='hit_number'></td>
+            </tr>
+          
+            <tr class="never" "">
+              <td class='line_number'>79</td>
+              <td class='code_line'>
+                <pre>  	# Gets recommendations for a person by using a weighted average</pre>
+              </td>
+              <td class='hit_number'></td>
+            </tr>
+          
+            <tr class="never" "">
+              <td class='line_number'>80</td>
+              <td class='code_line'>
+                <pre>  	# of every other user's rankings</pre>
+              </td>
+              <td class='hit_number'></td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>81</td>
+              <td class='code_line'>
+                <pre>  	def self.get_recommendations(preferences, person, similarity=:similarity_pearson)</pre>
+              </td>
+              <td class='hit_number'>52</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>82</td>
+              <td class='code_line'>
+                <pre>  	  totals = {}</pre>
+              </td>
+              <td class='hit_number'>52</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>83</td>
+              <td class='code_line'>
+                <pre>  	  similarity_sums = {}</pre>
+              </td>
+              <td class='hit_number'>52</td>
+            </tr>
+          
+            <tr class="never" "">
+              <td class='line_number'>84</td>
+              <td class='code_line'>
+                <pre>  	  </pre>
+              </td>
+              <td class='hit_number'></td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>85</td>
+              <td class='code_line'>
+                <pre>  	  preferences.each do |other|</pre>
+              </td>
+              <td class='hit_number'>52</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>86</td>
+              <td class='code_line'>
+                <pre>        </pre>
+              </td>
+              <td class='hit_number'>4</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>87</td>
+              <td class='code_line'>
+                <pre>        # Don't compare person with itself</pre>
+              </td>
+              <td class='hit_number'>24</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>88</td>
+              <td class='code_line'>
+                <pre>  	    if other[0] != person</pre>
+              </td>
+              <td class='hit_number'>247</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>89</td>
+              <td class='code_line'>
+                <pre></pre>
+              </td>
+              <td class='hit_number'>17</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>90</td>
+              <td class='code_line'>
+                <pre>  	      sim = (send similarity, preferences, person, other[0])</pre>
+              </td>
+              <td class='hit_number'>216</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>91</td>
+              <td class='code_line'>
+                <pre>  	      </pre>
+              </td>
+              <td class='hit_number'>11</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>92</td>
+              <td class='code_line'>
+                <pre>  	      # Ignore scores lower than zero</pre>
+              </td>
+              <td class='hit_number'>15</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>93</td>
+              <td class='code_line'>
+                <pre>  	      if sim > 0</pre>
+              </td>
+              <td class='hit_number'>237</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>94</td>
+              <td class='code_line'>
+                <pre></pre>
+              </td>
+              <td class='hit_number'>86</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>95</td>
+              <td class='code_line'>
+                <pre>  	        preferences[other[0]].each do |item, score|</pre>
+              </td>
+              <td class='hit_number'>158</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>96</td>
+              <td class='code_line'>
+                <pre>  	          </pre>
+              </td>
+              <td class='hit_number'>425</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>97</td>
+              <td class='code_line'>
+                <pre>  	          # Only scores items not already scored</pre>
+              </td>
+              <td class='hit_number'>257</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>98</td>
+              <td class='code_line'>
+                <pre>              if preferences[person].has_key?(item) == false  || preferences[person][item] == 0</pre>
+              </td>
+              <td class='hit_number'>650</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>99</td>
+              <td class='code_line'>
+                <pre>                </pre>
+              </td>
+              <td class='hit_number'>168</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>100</td>
+              <td class='code_line'>
+                <pre>                totals.default = 0</pre>
+              </td>
+              <td class='hit_number'>416</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>101</td>
+              <td class='code_line'>
+                <pre>                totals[item] += preferences[other[0]][item] * sim</pre>
+              </td>
+              <td class='hit_number'>132</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>102</td>
+              <td class='code_line'>
+                <pre>                </pre>
+              </td>
+              <td class='hit_number'>111</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>103</td>
+              <td class='code_line'>
+                <pre>                similarity_sums.default = 0</pre>
+              </td>
+              <td class='hit_number'>150</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>104</td>
+              <td class='code_line'>
+                <pre>                similarity_sums[item] += sim</pre>
+              </td>
+              <td class='hit_number'>161</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>105</td>
+              <td class='code_line'>
+                <pre>              end</pre>
+              </td>
+              <td class='hit_number'>73</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>106</td>
+              <td class='code_line'>
+                <pre>            end</pre>
+              </td>
+              <td class='hit_number'>21</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>107</td>
+              <td class='code_line'>
+                <pre>	        end</pre>
+              </td>
+              <td class='hit_number'>46</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>108</td>
+              <td class='code_line'>
+                <pre>	        </pre>
+              </td>
+              <td class='hit_number'>85</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>109</td>
+              <td class='code_line'>
+                <pre>  	    end</pre>
+              </td>
+              <td class='hit_number'>66</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>110</td>
+              <td class='code_line'>
+                <pre>  	     </pre>
+              </td>
+              <td class='hit_number'>15</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>111</td>
+              <td class='code_line'>
+                <pre>  	  end</pre>
+              </td>
+              <td class='hit_number'>63</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>112</td>
+              <td class='code_line'>
+                <pre>  	  </pre>
+              </td>
+              <td class='hit_number'>49</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>113</td>
+              <td class='code_line'>
+                <pre>  	  rankings = []</pre>
+              </td>
+              <td class='hit_number'>95</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>114</td>
+              <td class='code_line'>
+                <pre>  	    </pre>
+              </td>
+              <td class='hit_number'>35</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>115</td>
+              <td class='code_line'>
+                <pre>  	  totals.each do |item, total|</pre>
+              </td>
+              <td class='hit_number'>109</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>116</td>
+              <td class='code_line'>
+                <pre>        rankings << [(total/similarity_sums[item]),item]</pre>
+              </td>
+              <td class='hit_number'>79</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>117</td>
+              <td class='code_line'>
+                <pre>      end</pre>
+              </td>
+              <td class='hit_number'>71</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>118</td>
+              <td class='code_line'>
+                <pre></pre>
+              </td>
+              <td class='hit_number'>101</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>119</td>
+              <td class='code_line'>
+                <pre>      rankings.sort.reverse</pre>
+              </td>
+              <td class='hit_number'>122</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>120</td>
+              <td class='code_line'>
+                <pre>  	      </pre>
+              </td>
+              <td class='hit_number'>14</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>121</td>
+              <td class='code_line'>
+                <pre>	  end</pre>
+              </td>
+              <td class='hit_number'>36</td>
+            </tr>
+          
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>122</td>
+              <td class='code_line'>
+                <pre>	  </pre>
+              </td>
+              <td class='hit_number'>21</td>
+            </tr>
+          
+            <tr class="never" "">
+              <td class='line_number'>123</td>
               <td class='code_line'>
                 <pre>  end</pre>
               </td>
               <td class='hit_number'></td>
             </tr>
           
-            <tr class="never" "">
-              <td class='line_number'>77</td>
+            <tr class="hit" data-hits='#{cov}'"">
+              <td class='line_number'>124</td>
               <td class='code_line'>
                 <pre>end</pre>
               </td>
-              <td class='hit_number'></td>
+              <td class='hit_number'>7</td>
             </tr>
           
         </table>
@@ -704,6 +1080,6 @@
       
     </div>
     
-    <p>Generated on: 2011-04-25 00:06:51 -0400</p>
+    <p>Generated on: 2011-04-25 23:19:07 -0400</p>
   </body>
 </html>

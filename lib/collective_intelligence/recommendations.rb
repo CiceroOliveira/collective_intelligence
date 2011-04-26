@@ -61,6 +61,8 @@ module CollectiveIntelligence
   		den == 0 ? 0 : num/den
   	end
 	
+	  # Return the best matches for person from the prefs dictionary.
+	  # Number of results and similarity function are optional
   	def self.top_matches(preferences, person, n=5, similarity=:similarity_pearson)
   		scores = []
   		preferences.each do |other|
@@ -73,5 +75,50 @@ module CollectiveIntelligence
   		scores.reverse!
   		return scores[0...n]
   	end
+  	
+  	# Gets recommendations for a person by using a weighted average
+  	# of every other user's rankings
+  	def self.get_recommendations(preferences, person, similarity=:similarity_pearson)
+  	  totals = {}
+  	  similarity_sums = {}
+  	  
+  	  preferences.each do |other|
+        
+        # Don't compare person with itself
+  	    if other[0] != person
+
+  	      sim = (send similarity, preferences, person, other[0])
+  	      
+  	      # Ignore scores lower than zero
+  	      if sim > 0
+
+  	        preferences[other[0]].each do |item, score|
+  	          
+  	          # Only scores items not already scored
+              if preferences[person].has_key?(item) == false  || preferences[person][item] == 0
+                
+                totals.default = 0
+                totals[item] += preferences[other[0]][item] * sim
+                
+                similarity_sums.default = 0
+                similarity_sums[item] += sim
+              end
+            end
+	        end
+	        
+  	    end
+  	     
+  	  end
+  	  
+  	  rankings = []
+  	    
+  	  totals.each do |item, total|
+        rankings << [(total/similarity_sums[item]),item]
+      end
+
+      rankings.sort.reverse
+  	      
+	  end
+	  
   end
 end
